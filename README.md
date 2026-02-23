@@ -41,7 +41,7 @@
 ## 6. 사용 방법 (How to Reproduce)
 
 **Keyring 설정 및 암호화 활성화**
-   `/etc/mysql/mysql.conf.d/mysqld.cnf`에 다음 설정 추가 후 재시작: ./benshmark.sh
+   `/etc/mysql/mysql.conf.d/mysqld.cnf`에 다음 설정 추가 후 재시작 `./benshmark.sh`
    ```ini
    early-plugin-load = keyring_file.so
    keyring_file_data = /var/lib/mysql-keyring/keyring
