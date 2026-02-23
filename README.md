@@ -24,12 +24,6 @@
 | **Avg Latency** | **18.07 ms** | **17.43 ms** | **유사** |
 | **Max Latency** | **274.03 ms** | **316.57 ms** | **🔺 15.5% 상승 (Spike)** |
 
----
-> **[이미지 삽입: 암호화 적용 전후의 TPS 비교 막대 그래프]**
----
-> **[이미지 삽입: Max Latency가 튀는 현상을 보여주는 결과 로그 캡처]**
----
-
 ## 4. 핵심 분석 (Technical Insights)
 
 ### 왜 성능 차이가 미미한가?
@@ -46,8 +40,8 @@
 
 ## 6. 사용 방법 (How to Reproduce)
 
-1. **Keyring 설정 및 암호화 활성화**
-   `/etc/mysql/mysql.conf.d/mysqld.cnf`에 다음 설정 추가 후 재시작:
+**Keyring 설정 및 암호화 활성화**
+   `/etc/mysql/mysql.conf.d/mysqld.cnf`에 다음 설정 추가 후 재시작: ./benshmark.sh
    ```ini
    early-plugin-load = keyring_file.so
    keyring_file_data = /var/lib/mysql-keyring/keyring
